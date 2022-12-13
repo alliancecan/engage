@@ -1,0 +1,481 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #32322F;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.dot {
+    font-weight: bold;
+    color: #D6AB00;
+}
+
+.dot::after {
+    content: '.';
+}
+
+.dot.medium {
+    font-weight: 500;
+}
+
+.btn {
+    display: block;
+    width: min-content;
+    margin: 1rem auto;
+    padding: 1rem 2.5rem;
+    background-color: #D6AB00;
+    color: #32322F;
+    box-shadow: 2px 2px 5px #2F20043B;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    background-color: #32322F;
+    color: #fff;
+}
+
+/*
+ Header
+*/
+header {
+    padding: 1rem 2rem;
+    background-image: url('../img/Hero-Spot-Banner_Dark.jpg');
+    background-size: cover;
+    background-position: right;
+}
+
+header h1 {
+    margin: 4rem 0;
+    color: #fff;
+    font-weight: normal;
+}
+
+header h1 div {
+    width: min-content;
+    margin: .2rem 0;
+    padding: .1rem 1rem;
+    background-color: #32322F;
+    white-space: nowrap;
+}
+
+header .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+header .logo {
+    max-width: 22rem;
+}
+
+
+.language {
+    text-decoration: none;
+    padding: .5rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+.language:hover {
+    background-color: #32322F;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.thin {
+    font-weight: 100;
+}
+
+/*
+ Accel
+*/
+.accel .wrapper {
+    max-width: 60rem;
+    margin: 6rem auto;
+    padding: 0 2rem;
+}
+
+.accel h2 {
+    font-size: 1.8rem;
+}
+
+.accel .line {
+    width: 8rem;
+    height: 3px;
+    margin: 1.5rem 0;
+    background-color: #CFAD39;
+}
+
+/*
+ Card
+*/
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin: 1rem 3rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 25rem;
+    box-shadow: 2px 2px 15px #0000003E;
+    transition: all .2s;
+}
+
+.card:hover {
+    transform: translate(-.75rem, -.75rem);
+    box-shadow: 2px 2px 15px #0000003E,
+                .75rem .75rem 0 #989897;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin: .5rem 0;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    font-weight: 500;
+}
+
+.card p {
+    flex: 1;
+    margin: 1rem 0 2rem;
+}
+
+/*
+ Serve
+*/
+.serve {
+    max-width: 40rem;
+    margin: 8rem auto;
+    padding: 0 2rem 4rem;
+    background: no-repeat bottom right 2rem/15rem url('../img/Alliance_Arrows.svg');
+}
+
+.serve h2 {
+    font-size: 1.5rem;
+}
+
+/*
+ Company
+*/
+.company {
+    background-color: #F1F2F2;
+    padding: 7rem 2rem;
+}
+
+.company .wrapper {
+    position: relative;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.company .schemas img {
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.company .schemas {
+    position: relative;
+    padding: 0 3rem 0 0;
+    color: #fff;
+}
+
+.company .schemas-text {
+    position: absolute; 
+    top: 50%;
+    left: calc(50% - 1rem);
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+.company .number {    
+    font-size: 25vw;
+    text-align: center;
+    line-height: .85;
+}
+
+.company .members {   
+    text-align: right;
+}
+
+.company h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 2rem 1rem 0 3rem;
+}
+
+.company p {
+    margin: 0;
+    padding: 1rem 1rem 2rem 3rem;
+}
+
+.company .btn-container {
+    margin: 0 0 0 3rem;
+    position: relative;
+}
+
+.company .btn {
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.company .connector-vertical.schemas::after {
+    height: 50%;
+    top: 50%;
+}
+
+.company .connector-vertical.btn-container::after {
+    height: 50%;
+    top: 0;
+}
+
+.company .connector-vertical {
+    position: relative;
+}
+
+.company .connector-vertical::after {
+    content: '';
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #CFAD39;
+}
+
+.company .connector-end {
+    width: 50%;
+    height: 3px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+    transform: translate(0, -50%);
+    background-color: #CFAD39;
+}
+
+.company .btn-container .connector-end {
+    width: 100%;
+}
+
+.company .seperator {
+    display: none;
+    width: 75%;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    background-color: #CFAD39;
+}
+
+/*
+ Digital
+*/
+.digital {
+    padding: 8rem 2rem;
+    background: center/cover url('../img/tech-banner_picture_Dark.jpg');
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.digital .wrapper {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+/*
+ Footer
+*/
+footer {
+    padding: calc(22.788761% + 5rem) 0;
+    background: #F1F2F2
+                no-repeat bottom/100% url('../img/Alliance_Footer-Shapes.svg');
+    text-align: center;
+}
+
+footer p {
+    max-width: 28rem;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    font-weight: 500;
+}
+
+@media (min-width: 30rem) {
+    header .nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .language {
+        align-self: auto;
+    }
+}
+
+@media (min-width: 55rem) {
+    /*
+     Header
+    */
+    header h1 {
+        margin: 7rem 3rem;
+        font-size: 2.5rem;
+    }
+
+    header .logo {
+        margin: 1rem 3rem;
+    }
+
+    /*
+     Accel
+    */
+    .accel .wrapper {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    .accel h2 {
+        grid-row: 1 / 3;
+        padding: 1rem 2rem 0 0;
+        margin: 0 2rem 0 0;
+
+        border-right: 4px solid #CFAD39;
+        text-align: right;
+    }
+
+    .accel p {
+        margin: 1rem 0 0;
+    }
+
+    .accel p:last-child {
+        margin: 1rem 0;
+    }
+
+    .accel .line {
+        display: none;
+    }
+
+    /*
+     Company
+    */
+    .company .wrapper {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50% auto 1fr;
+    }
+
+    .company .schemas {
+        grid-row: 1 / 4;
+        padding: 0;
+    }
+
+    .company .schemas-text {
+        position: absolute; 
+        left: calc(50% + 1rem);
+    }
+
+    .company .number {
+        font-size: 10rem;
+    }
+
+    .company h2 {
+        align-self: end;
+        max-width: 20rem;
+        padding-bottom: 1rem;
+    }
+
+    .company p {
+        padding-top: 1rem;
+    }
+
+    .company .btn-container {
+        align-self: start;
+    }
+
+    .connector-vertical::after {
+        display: none;
+    }
+
+    .company .connector-end {
+        display: none;
+    }
+
+    .company .seperator {
+        display: block;
+    }
+
+    /*
+     Digital
+    */
+    .digital {
+        font-size: 1.8rem;
+    }
+
+    /*
+     Footer
+    */
+    footer {
+        padding: 6rem 0 calc(22.788761% + 5rem);
+    }
+}
+
+@media (min-width: 65rem) {
+    /*
+     Header
+    */
+    header h1 {
+        margin: 12rem 3rem;
+        font-size: 5vw;
+    }
+
+    header .logo {
+        max-width: 40rem;
+    }
+
+    .language {
+        font-size: 1.4rem;
+    }
+}
